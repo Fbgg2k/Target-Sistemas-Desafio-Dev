@@ -832,7 +832,7 @@ git commit -m "feat: adiciona interface CLI"
 - [x] Corrigir falhas
 - [x] Executar ESLint
 - [x] Executar Prettier
-- [ ] Remover código duplicado
+- [x] Remover código duplicado
 - [x] Revisar nomes de funções
 - [x] Revisar mensagens de erro
 - [x] Revisar tratamento de valores monetários
@@ -973,7 +973,7 @@ Adicionar prints ou exemplos do terminal.
 - [x] Código organizado
 - [x] README completo
 - [x] `.gitignore`
-- [ ] Commits organizados
+- [x] Commits organizados
 - [x] Projeto executando do zero com `npm install`
 - [x] `npm test` funcionando
 - [x] `npm start` funcionando
@@ -1098,7 +1098,7 @@ Essas funcionalidades são **evoluções**, não requisitos necessários para a 
 
 [x] README OK
 [x] .gitignore OK
-[ ] Commits OK
+[x] Commits OK
 
 [x] npm install funciona
 [x] npm test funciona
