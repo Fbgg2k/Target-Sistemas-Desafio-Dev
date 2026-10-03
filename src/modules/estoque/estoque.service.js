@@ -1,8 +1,15 @@
 const { validarInteiroPositivo, validarTextoObrigatorio } = require('../../utils/validation');
 
-function criarServicoEstoque(produtosIniciais, movimentacoesIniciais = []) {
+function criarServicoEstoque(
+  produtosIniciais,
+  movimentacoesIniciais = [],
+  persistirEstado = () => {},
+) {
   if (!Array.isArray(produtosIniciais) || !Array.isArray(movimentacoesIniciais)) {
     throw new Error('Dados de estoque inválidos.');
+  }
+  if (typeof persistirEstado !== 'function') {
+    throw new Error('Persistência de estoque inválida.');
   }
 
   const produtos = new Map();
@@ -54,6 +61,14 @@ function criarServicoEstoque(produtosIniciais, movimentacoesIniciais = []) {
       estoqueAnterior,
       estoqueAtual,
     };
+
+    const novoEstoque = Array.from(produtos.values(), (item) =>
+      item.codigoProduto === codigoProduto ? { ...item, estoque: estoqueAtual } : { ...item },
+    );
+    persistirEstado({
+      estoque: novoEstoque,
+      movimentacoes: [...movimentacoes, registro],
+    });
 
     produto.estoque = estoqueAtual;
     movimentacoes.push(registro);

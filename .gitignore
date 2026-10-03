@@ -2,3 +2,5 @@ node_modules/
 coverage/
 .env
 .DS_Store
+data/estoque-estado.json
+data/estoque-estado.json.*.tmp

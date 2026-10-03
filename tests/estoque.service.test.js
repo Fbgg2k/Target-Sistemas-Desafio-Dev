@@ -43,4 +43,22 @@ describe('criarServicoEstoque', () => {
     expect(() => registrar({ tipo: 'AJUSTE' })).toThrow('Tipo de movimentação inválido.');
     expect(servico.listarEstoque()[0].estoque).toBe(10);
   });
+
+  test('não altera o estado em memória se a persistência falhar', () => {
+    const persistirEstado = () => {
+      throw new Error('Falha ao gravar');
+    };
+    const servico = criarServicoEstoque(produtos, [], persistirEstado);
+
+    expect(() =>
+      servico.registrarMovimentacao({
+        codigoProduto: 101,
+        tipo: 'ENTRADA',
+        descricao: 'Reposição',
+        quantidade: 5,
+      }),
+    ).toThrow('Falha ao gravar');
+    expect(servico.listarEstoque()[0].estoque).toBe(10);
+    expect(servico.listarMovimentacoes()).toEqual([]);
+  });
 });

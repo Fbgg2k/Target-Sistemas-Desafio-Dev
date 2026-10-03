@@ -1066,33 +1066,33 @@ Essas funcionalidades são **evoluções**, não requisitos necessários para a 
 # 23. Checklist final rápido
 
 ```text
-[ ] Node.js configurado
-[ ] Projeto npm criado
-[ ] Git configurado
-[ ] Dados JSON adicionados
+[x] Node.js configurado
+[x] Projeto npm criado
+[x] Git configurado
+[x] Dados JSON adicionados
 
-[ ] Comissão implementada
-[ ] Comissão testada
-[ ] Estoque implementado
-[ ] Estoque testado
-[ ] Juros implementado
-[ ] Juros testado
+[x] Comissão implementada
+[x] Comissão testada
+[x] Estoque implementado
+[x] Estoque testado
+[x] Juros implementado
+[x] Juros testado
 
-[ ] CLI implementada
-[ ] Validações implementadas
-[ ] Tratamento de erros implementado
+[x] CLI implementada
+[x] Validações implementadas
+[x] Tratamento de erros implementado
 
-[ ] Jest OK
-[ ] ESLint OK
-[ ] Prettier OK
+[x] Jest OK
+[x] ESLint OK
+[x] Prettier OK
 
-[ ] README OK
-[ ] .gitignore OK
+[x] README OK
+[x] .gitignore OK
 [ ] Commits OK
 
-[ ] npm install funciona
-[ ] npm test funciona
-[ ] npm start funciona
+[x] npm install funciona
+[x] npm test funciona
+[x] npm start funciona
 
 [ ] Repositório GitHub revisado
 [ ] Projeto pronto para entrega

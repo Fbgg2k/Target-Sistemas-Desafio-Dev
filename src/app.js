@@ -4,6 +4,7 @@ const { createInterface } = require('node:readline/promises');
 const { stdin, stdout } = require('node:process');
 const { exibirComissoes } = require('./modules/comissao/comissao.controller');
 const { exibirMovimentacao } = require('./modules/estoque/estoque.controller');
+const { criarRepositorioEstoque } = require('./modules/estoque/estoque.repository');
 const { criarServicoEstoque } = require('./modules/estoque/estoque.service');
 const { exibirCalculoJuros } = require('./modules/juros/juros.controller');
 
@@ -24,7 +25,14 @@ function lerNumero(entrada, label) {
 async function executar() {
   const vendas = lerDados('vendas.json').vendas;
   const dadosEstoque = lerDados('estoque.json').estoque;
-  const servicoEstoque = criarServicoEstoque(dadosEstoque);
+  const caminhoEstado = path.join(__dirname, '..', 'data', 'estoque-estado.json');
+  const repositorioEstoque = criarRepositorioEstoque(caminhoEstado, dadosEstoque);
+  const estadoEstoque = repositorioEstoque.carregar();
+  const servicoEstoque = criarServicoEstoque(
+    estadoEstoque.estoque,
+    estadoEstoque.movimentacoes,
+    repositorioEstoque.salvar,
+  );
   const terminal = createInterface({ input: stdin, output: stdout });
 
   try {
