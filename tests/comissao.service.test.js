@@ -23,10 +23,12 @@ describe('calcularComissoes', () => {
         { vendedor: 'Ana', valor: 100 },
         { vendedor: 'Ana', valor: 499.99 },
         { vendedor: 'Bia', valor: 90 },
+        { vendedor: 'Caio', valor: 500 },
       ]),
     ).toEqual([
       { vendedor: 'Ana', totalVendas: 599.99, totalComissao: 6 },
       { vendedor: 'Bia', totalVendas: 90, totalComissao: 0 },
+      { vendedor: 'Caio', totalVendas: 500, totalComissao: 25 },
     ]);
   });
 

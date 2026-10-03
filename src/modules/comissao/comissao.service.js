@@ -1,12 +1,15 @@
 const { fromCents, toCents } = require('../../utils/currency');
 const { validarTextoObrigatorio } = require('../../utils/validation');
 
+function calcularComissaoEmCentavos(valorEmCentavos) {
+  const taxaEmPontosBase = valorEmCentavos < 10000 ? 0 : valorEmCentavos < 50000 ? 100 : 500;
+  return Math.round((valorEmCentavos * taxaEmPontosBase) / 10000);
+}
+
 function calcularComissao(valor) {
   const valorEmCentavos = toCents(valor, 'Valor da venda');
-  const taxaEmPontosBase = valorEmCentavos < 10000 ? 0 : valorEmCentavos < 50000 ? 100 : 500;
-  const comissaoEmCentavos = Math.round((valorEmCentavos * taxaEmPontosBase) / 10000);
 
-  return fromCents(comissaoEmCentavos);
+  return fromCents(calcularComissaoEmCentavos(valorEmCentavos));
 }
 
 function calcularComissoes(vendas) {
@@ -19,10 +22,7 @@ function calcularComissoes(vendas) {
   for (const venda of vendas) {
     const vendedor = validarTextoObrigatorio(venda?.vendedor, 'Vendedor');
     const valorEmCentavos = toCents(venda.valor, 'Valor da venda');
-    const comissaoEmCentavos = Math.round(
-      (valorEmCentavos * (valorEmCentavos < 10000 ? 0 : valorEmCentavos < 50000 ? 100 : 500)) /
-        10000,
-    );
+    const comissaoEmCentavos = calcularComissaoEmCentavos(valorEmCentavos);
     const totais = totaisPorVendedor.get(vendedor) ?? { totalVendas: 0, totalComissao: 0 };
 
     totais.totalVendas += valorEmCentavos;
