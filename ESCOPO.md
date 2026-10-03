@@ -722,12 +722,12 @@ Criar estrutura de pastas.
 
 # 13. Check-in 1 — Dados
 
-- [ ] Criar `data/vendas.json`
-- [ ] Inserir dados fornecidos no desafio
-- [ ] Criar `data/estoque.json`
-- [ ] Inserir produtos fornecidos
-- [ ] Validar JSON
-- [ ] Criar funções para leitura dos arquivos
+- [x] Criar `data/vendas.json`
+- [x] Inserir dados fornecidos no desafio
+- [x] Criar `data/estoque.json`
+- [x] Inserir produtos fornecidos
+- [x] Validar JSON
+- [x] Criar funções para leitura dos arquivos
 
 Commit sugerido:
 
@@ -740,16 +740,16 @@ git commit -m "chore: adiciona dados iniciais do desafio"
 
 # 14. Check-in 2 — Comissão
 
-- [ ] Implementar regra abaixo de R$ 100
-- [ ] Implementar regra entre R$ 100 e R$ 499,99
-- [ ] Implementar regra a partir de R$ 500
-- [ ] Calcular comissão individual
-- [ ] Agrupar por vendedor
-- [ ] Calcular total vendido
-- [ ] Calcular total de comissão
-- [ ] Validar entradas
-- [ ] Criar testes unitários
-- [ ] Validar resultado no terminal
+- [x] Implementar regra abaixo de R$ 100
+- [x] Implementar regra entre R$ 100 e R$ 499,99
+- [x] Implementar regra a partir de R$ 500
+- [x] Calcular comissão individual
+- [x] Agrupar por vendedor
+- [x] Calcular total vendido
+- [x] Calcular total de comissão
+- [x] Validar entradas
+- [x] Criar testes unitários
+- [x] Validar resultado no terminal
 
 Commit:
 
@@ -762,17 +762,17 @@ git commit -m "feat: implementa calculo de comissoes"
 
 # 15. Check-in 3 — Estoque
 
-- [ ] Implementar consulta de produto
-- [ ] Implementar entrada
-- [ ] Implementar saída
-- [ ] Criar identificador único
-- [ ] Registrar descrição
-- [ ] Validar quantidade
-- [ ] Validar produto
-- [ ] Impedir estoque negativo
-- [ ] Retornar estoque anterior
-- [ ] Retornar estoque atualizado
-- [ ] Criar testes unitários
+- [x] Implementar consulta de produto
+- [x] Implementar entrada
+- [x] Implementar saída
+- [x] Criar identificador único
+- [x] Registrar descrição
+- [x] Validar quantidade
+- [x] Validar produto
+- [x] Impedir estoque negativo
+- [x] Retornar estoque anterior
+- [x] Retornar estoque atualizado
+- [x] Criar testes unitários
 
 Commit:
 
@@ -785,17 +785,17 @@ git commit -m "feat: implementa movimentacao de estoque"
 
 # 16. Check-in 4 — Juros
 
-- [ ] Receber valor
-- [ ] Receber vencimento
-- [ ] Calcular dias de atraso
-- [ ] Aplicar 2,5% ao dia
-- [ ] Calcular juros
-- [ ] Calcular valor atualizado
-- [ ] Tratar vencimento futuro
-- [ ] Tratar vencimento atual
-- [ ] Validar data
-- [ ] Validar valor
-- [ ] Criar testes unitários
+- [x] Receber valor
+- [x] Receber vencimento
+- [x] Calcular dias de atraso
+- [x] Aplicar 2,5% ao dia
+- [x] Calcular juros
+- [x] Calcular valor atualizado
+- [x] Tratar vencimento futuro
+- [x] Tratar vencimento atual
+- [x] Validar data
+- [x] Validar valor
+- [x] Criar testes unitários
 
 Commit:
 
@@ -808,14 +808,14 @@ git commit -m "feat: implementa calculo de juros"
 
 # 17. Check-in 5 — CLI
 
-- [ ] Criar menu principal
-- [ ] Criar opção de comissão
-- [ ] Criar opção de estoque
-- [ ] Criar opção de juros
-- [ ] Criar opção de saída
-- [ ] Validar entradas do usuário
-- [ ] Melhorar mensagens do terminal
-- [ ] Formatar valores em BRL
+- [x] Criar menu principal
+- [x] Criar opção de comissão
+- [x] Criar opção de estoque
+- [x] Criar opção de juros
+- [x] Criar opção de saída
+- [x] Validar entradas do usuário
+- [x] Melhorar mensagens do terminal
+- [x] Formatar valores em BRL
 
 Commit:
 
@@ -828,15 +828,15 @@ git commit -m "feat: adiciona interface CLI"
 
 # 18. Check-in 6 — Qualidade
 
-- [ ] Executar todos os testes
-- [ ] Corrigir falhas
-- [ ] Executar ESLint
-- [ ] Executar Prettier
+- [x] Executar todos os testes
+- [x] Corrigir falhas
+- [x] Executar ESLint
+- [x] Executar Prettier
 - [ ] Remover código duplicado
-- [ ] Revisar nomes de funções
-- [ ] Revisar mensagens de erro
-- [ ] Revisar tratamento de valores monetários
-- [ ] Revisar tratamento de datas
+- [x] Revisar nomes de funções
+- [x] Revisar mensagens de erro
+- [x] Revisar tratamento de valores monetários
+- [x] Revisar tratamento de datas
 
 Comandos:
 
@@ -858,6 +858,16 @@ git commit -m "chore: aplica melhorias de qualidade"
 # 19. Check-in 7 — README
 
 O README deve explicar:
+
+- [x] Sobre o projeto
+- [x] Tecnologias
+- [x] Requisitos
+- [x] Instalação
+- [x] Execução
+- [x] Testes
+- [x] Estrutura
+- [x] Regras de negócio
+- [x] Exemplo do menu no terminal
 
 ## 1. Sobre o projeto
 
@@ -923,50 +933,50 @@ Adicionar prints ou exemplos do terminal.
 
 ### Comissão
 
-- [ ] Leitura do JSON
-- [ ] Comissão abaixo de R$ 100 = 0%
-- [ ] Comissão de R$ 100 a R$ 499,99 = 1%
-- [ ] Comissão a partir de R$ 500 = 5%
-- [ ] Resultado por vendedor
-- [ ] Total de vendas
-- [ ] Total de comissão
+- [x] Leitura do JSON
+- [x] Comissão abaixo de R$ 100 = 0%
+- [x] Comissão de R$ 100 a R$ 499,99 = 1%
+- [x] Comissão a partir de R$ 500 = 5%
+- [x] Resultado por vendedor
+- [x] Total de vendas
+- [x] Total de comissão
 
 ### Estoque
 
-- [ ] Leitura do JSON
-- [ ] Identificação do produto
-- [ ] Entrada
-- [ ] Saída
-- [ ] ID único
-- [ ] Descrição
-- [ ] Validação de quantidade
-- [ ] Bloqueio de estoque negativo
-- [ ] Retorno do estoque final
+- [x] Leitura do JSON
+- [x] Identificação do produto
+- [x] Entrada
+- [x] Saída
+- [x] ID único
+- [x] Descrição
+- [x] Validação de quantidade
+- [x] Bloqueio de estoque negativo
+- [x] Retorno do estoque final
 
 ### Juros
 
-- [ ] Recebimento do valor
-- [ ] Recebimento da data de vencimento
-- [ ] Cálculo dos dias em atraso
-- [ ] Aplicação de 2,5% ao dia
-- [ ] Cálculo dos juros
-- [ ] Cálculo do valor atualizado
-- [ ] Tratamento de vencimento futuro
-- [ ] Tratamento de vencimento atual
+- [x] Recebimento do valor
+- [x] Recebimento da data de vencimento
+- [x] Cálculo dos dias em atraso
+- [x] Aplicação de 2,5% ao dia
+- [x] Cálculo dos juros
+- [x] Cálculo do valor atualizado
+- [x] Tratamento de vencimento futuro
+- [x] Tratamento de vencimento atual
 
 ### Qualidade
 
-- [ ] Testes automatizados
-- [ ] ESLint sem erros
-- [ ] Prettier aplicado
-- [ ] Tratamento de erros
-- [ ] Código organizado
-- [ ] README completo
-- [ ] `.gitignore`
+- [x] Testes automatizados
+- [x] ESLint sem erros
+- [x] Prettier aplicado
+- [x] Tratamento de erros
+- [x] Código organizado
+- [x] README completo
+- [x] `.gitignore`
 - [ ] Commits organizados
-- [ ] Projeto executando do zero com `npm install`
-- [ ] `npm test` funcionando
-- [ ] `npm start` funcionando
+- [x] Projeto executando do zero com `npm install`
+- [x] `npm test` funcionando
+- [x] `npm start` funcionando
 
 ---
 
